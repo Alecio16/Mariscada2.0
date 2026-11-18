@@ -1,0 +1,395 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #17324d;
+    background: #f5fbfc;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: white;
+    padding: 12px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 48px;
+    height: 58px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5px;
+}
+
+.logo h2 {
+    color: #087e8b;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #17324d;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #f4a261;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* INÍCIO */
+
+.hero {
+    min-height: 440px;
+    background:
+        linear-gradient(rgba(3,42,58,.78),rgba(3,42,58,.78)),
+        url("https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=1600&q=85");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 18px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    background: #f4a261;
+    color: #032a3a;
+    padding: 14px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.botao:hover {
+    background: #ffbd80;
+    transform: translateY(-2px);
+}
+
+/* APRESENTAÇÃO */
+
+.apresentacao {
+    text-align: center;
+    padding: 65px 10%;
+    line-height: 1.8;
+}
+
+.apresentacao h2 {
+    margin-bottom: 15px;
+    color: #087e8b;
+}
+
+/* CARDÁPIO */
+
+.cardapio {
+    padding: 65px 7%;
+    background: #f5fbfc;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.titulo p {
+    color: #64727a;
+}
+
+.categoria-titulo {
+    margin: 35px 0 20px;
+    color: #087e8b;
+    font-size: 25px;
+}
+
+.bebidas-titulo {
+    border-top: 2px solid #dce8e9;
+    padding-top: 35px;
+}
+
+/* PESQUISA */
+
+.pesquisa {
+    max-width: 550px;
+    margin: 0 auto 22px;
+    display: flex;
+    background: white;
+    border: 1px solid #d5e1e4;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.pesquisa input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.pesquisa button {
+    border: none;
+    background: white;
+    padding: 0 15px;
+    cursor: pointer;
+    color: #64727a;
+    font-size: 20px;
+}
+
+/* FILTROS */
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.filtro {
+    padding: 11px 17px;
+    border: 1px solid #087e8b;
+    border-radius: 25px;
+    background: white;
+    color: #087e8b;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.filtro:hover,
+.filtro.ativo {
+    background: #087e8b;
+    color: white;
+}
+
+.contador {
+    color: #64727a;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+/* PRODUTOS */
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.produto {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+    transition: .2s;
+}
+
+.produto:hover {
+    transform: translateY(-4px);
+}
+
+.produto[hidden] {
+    display: none;
+}
+
+.produto img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.produto-info {
+    padding: 22px;
+}
+
+.produto-info span {
+    display: inline-block;
+    color: #087e8b;
+    background: #e5f3f3;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.produto-info h3 {
+    margin: 12px 0;
+    font-size: 19px;
+}
+
+.produto-info p {
+    color: #64727a;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.produto-info strong {
+    color: #f4a261;
+    font-size: 18px;
+}
+
+#semResultados {
+    text-align: center;
+    padding: 30px;
+    color: #64727a;
+}
+
+/* SOBRE */
+
+.sobre {
+    background: #e8f4f6;
+    padding: 75px 12%;
+    text-align: center;
+    line-height: 1.9;
+}
+
+.sobre h2 {
+    color: #087e8b;
+    margin-bottom: 20px;
+}
+
+/* CONTATO */
+
+.contato {
+    background: #032a3a;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.contato h2 {
+    margin-bottom: 15px;
+}
+
+.contato p {
+    margin-bottom: 25px;
+}
+
+.contato .aviso {
+    font-size: 11px;
+    color: #b9cbd0;
+    margin: 15px 0 0;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #021c29;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    font-size: 12px;
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+    header {
+        padding: 12px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 500px) {
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 380px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .cardapio {
+        padding: 50px 6%;
+    }
+
+    .produto img {
+        height: 210px;
+    }
+
+    .filtros {
+        justify-content: flex-start;
+    }
+}

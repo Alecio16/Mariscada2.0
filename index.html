@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariscada - Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo-mariscada.jpeg.png" alt="Logo Mariscada">
+        <h2>MARISCADA</h2>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav id="nav">
+        <a href="#inicio">Início</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1>Bem-vindo à Mariscada!</h1>
+        <p>Uma experiência especial com os melhores sabores do mar.</p>
+        <a href="#cardapio" class="botao">Conheça nosso cardápio</a>
+    </div>
+</section>
+
+<section class="apresentacao">
+    <h2>Uma experiência de sabor</h2>
+    <p>
+        Na Mariscada, oferecemos refeições especiais com frutos do mar,
+        qualidade, sabor e um ambiente agradável para toda a família.
+    </p>
+</section>
+
+<section class="cardapio" id="cardapio">
+
+    <div class="titulo">
+        <h2>Nosso Cardápio</h2>
+        <p>Escolha sua próxima experiência gastronômica!</p>
+    </div>
+
+    <div class="pesquisa">
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Pesquisar pratos ou bebidas..."
+        >
+        <button id="clearSearch" aria-label="Limpar pesquisa">✕</button>
+    </div>
+
+    <div class="filtros">
+        <button class="filtro ativo" data-categoria="todos">Todos</button>
+        <button class="filtro" data-categoria="entradas">Entradas</button>
+        <button class="filtro" data-categoria="principais">Pratos principais</button>
+        <button class="filtro" data-categoria="sobremesas">Sobremesas</button>
+        <button class="filtro" data-categoria="bebidas">Bebidas</button>
+    </div>
+
+    <p id="contador" class="contador"></p>
+
+    <h2 class="categoria-titulo">🍤 Comidas</h2>
+
+    <div class="produtos" id="comidas">
+
+        <article class="produto" data-categoria="entradas">
+            <img src="https://images.unsplash.com/photo-1625944525533-473f1a3d54e7?auto=format&fit=crop&w=700&q=80" alt="Camarão empanado">
+            <div class="produto-info">
+                <span>Entrada</span>
+                <h3>Camarão Empanado</h3>
+                <p>Camarões crocantes acompanhados de molho especial.</p>
+                <strong>R$ 32,90</strong>
+            </div>
+        </article>
+
+        <article class="produto" data-categoria="entradas">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=700&q=80" alt="Bolinho de camarão">
+            <div class="produto-info">
+                <span>Entrada</span>
+                <h3>Bolinho de Camarão</h3>
+                <p>Bolinho recheado com camarão e temperos especiais.</p>
+                <strong>R$ 24,90</strong>
+            </div>
+        </article>
+
+        <article class="produto" data-categoria="principais">
+            <img src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=700&q=80" alt="Moqueca de camarão">
+            <div class="produto-info">
+                <span>Prato principal</span>
+                <h3>Moqueca de Camarão</h3>
+                <p>Camarões preparados com leite de coco e temperos.</p>
+                <strong>R$ 69,90</strong>
+            </div>
+        </article>
+
+        <article class="produto" data-categoria="principais">
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=700&q=80" alt="Peixe grelhado">
+            <div class="produto-info">
+                <span>Prato principal</span>
+                <h3>Peixe Grelhado</h3>
+                <p>Filé de peixe grelhado com acompanhamentos.</p>
+                <strong>R$ 54,90</strong>
+            </div>
+        </article>
+
+        <article class="produto" data-categoria="principais">
+            <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=700&q=80" alt="Risoto">
+            <div class="produto-info">
+                <span>Prato principal</span>
+                <h3>Risoto de Camarão</h3>
+                <p>Risoto cremoso com camarões selecionados.</p>
+                <strong>R$ 62,90</strong>
+            </div>
+        </article>
+
+        <article class="produto" data-categoria="principais">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=700&q=80" alt="Frutos do mar">
+            <div class="produto-info">
+                <span>Especial da casa</span>
+                <h3>Mariscada Especial</h3>
+                <p>Uma seleção especial de frutos do mar.</p>
+                <strong>R$ 84,90</strong>
+            </div>
+        </article>
+
+        <article class="produto" data-categoria="sobremesas">
+            <img src="https://images.unsplash.com/photo-1551024506-0ashin?auto=format&fit=crop&w=700&q=80" alt="Sobremesa">
+            <div class="produto-info">
+                <span>Sobremesa</span>
+                <h3>Pudim de Coco</h3>
+                <p>Sobremesa cremosa com sabor tropical.</p>
+                <strong>R$ 16,90</strong>
+            </div>
+        </article>
+
+        <article class="produto" data-categoria="sobremesas">
+            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=80" alt="Cheesecake">
+            <div class="produto-info">
+                <span>Sobremesa</span>
+                <h3>Cheesecake Tropical</h3>
+                <p>Cheesecake com cobertura de frutas.</p>
+                <strong>R$ 19,90</strong>
+            </div>
+        </article>
+
+    </div>
+
+    <h2 class="categoria-titulo bebidas-titulo">🥤 Bebidas</h2>
+
+    <div class="produtos bebidas-grid" id="bebidas">
+
+        <article class="produto" data-categoria="bebidas">
+            <img src="https://images.unsplash.com/photo-1513558161293-c05b7f1c7b?auto=format&fit=crop&w=700&q=80" alt="Limonada">
+            <div class="produto-info">
+                <span>Bebida</span>
+                <h3>Limonada</h3>
+                <p>Limonada natural e refrescante.</p>
+                <strong>R$ 9,90</strong>
+            </div>
+        </article>
+
+        <article class="produto" data-categoria="bebidas">
+            <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=700&q=80" alt="Suco de laranja">
+            <div class="produto-info">
+                <span>Bebida</span>
+                <h3>Suco de Laranja</h3>
+                <p>Suco natural preparado na hora.</p>
+                <strong>R$ 10,90</strong>
+            </div>
+        </article>
+
+        <article class="produto" data-categoria="bebidas">
+            <img src="https://images.unsplash.com/photo-1581636625402-29b2a704ef13?auto=format&fit=crop&w=700&q=80" alt="Refrigerante">
+            <div class="produto-info">
+                <span>Bebida</span>
+                <h3>Refrigerante</h3>
+                <p>Refrigerante gelado em lata.</p>
+                <strong>R$ 7,00</strong>
+            </div>
+        </article>
+
+        <article class="produto" data-categoria="bebidas">
+            <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=700&q=80" alt="Água mineral">
+            <div class="produto-info">
+                <span>Bebida</span>
+                <h3>Água Mineral</h3>
+                <p>Água mineral sem gás.</p>
+                <strong>R$ 5,00</strong>
+            </div>
+        </article>
+
+    </div>
+
+    <p id="semResultados" hidden>Nenhum produto encontrado.</p>
+
+</section>
+
+<section class="sobre" id="sobre">
+    <h2>Sobre a Mariscada</h2>
+    <p>
+        A Mariscada é um restaurante especializado em frutos do mar,
+        com a proposta de proporcionar refeições saborosas,
+        qualidade nos produtos e uma experiência agradável.
+    </p>
+</section>
+
+<section class="contato" id="contato">
+    <h2>Venha conhecer a Mariscada!</h2>
+    <p>Entre em contato e conheça nossas opções.</p>
+    <a href="https://wa.me/5511999999999" class="botao" target="_blank">
+        Fale conosco
+    </a>
+    <p class="aviso">Substitua o número demonstrativo pelo WhatsApp correto.</p>
+</section>
+
+<footer>
+    <p>© 2026 Mariscada - Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
